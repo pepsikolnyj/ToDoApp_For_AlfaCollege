@@ -1,0 +1,154 @@
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+#root {
+    max-width: none;
+}
+.app_layout {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+.app_layout .side_bar,
+.app_layout .side_bar_active {
+    position: relative;
+
+    flex: 0 0 70px;
+    width: 70px;
+    height: 100vh;
+}
+
+.app_layout .side_bar_active {
+    flex-basis: 25em;
+    width: 25em;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+
+    background-color: #2B4B52;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.side_bar, .side_bar_active {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 70px;
+    height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 12px 8px;
+
+    background-color: #041C1F;
+
+    gap: 8px;
+}
+
+.side_bar_active {
+    width: 25em;
+    align-items: flex-start;
+    padding-left: 2em;
+}
+
+.side_bar button, .side_bar_active button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #E0E7E9;
+
+    cursor: pointer;
+}
+.side_bar h3 {
+    display: none;
+}
+.side_bar_active button {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.4em;
+}
+.side_bar button:hover, .side_bar_active button:hover {
+    color: white;
+}
+
+.side_bar svg, .side_bar_active svg {
+    width: 50px;
+    height: 50px;
+}
+
+/* Последняя кнопка — внизу */
+.side_bar .avatarIcon, .side_bar_active .avatarIcon {
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+}
+.main_item_1 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: center;
+  background-color: #B7C9CC;
+  padding: 15px 50px 50px 50px;
+  border-radius: 15px;
+}
+.main_item_1 {
+  overflow-y: auto;
+  scrollbar-width: none;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.placeHolder {
+  background-color: #B7C9CC;
+  padding: 15px 15px 15px 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2px;
+}
+.mark_as_done, .remove_button {
+  height: fit-content;
+  border-radius: 15px;
+}
+
